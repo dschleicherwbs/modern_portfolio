@@ -128,6 +128,28 @@ main {
   }
 }
 
+// Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 1.5rem;
+    border: 3px #333 solid;
+    padding: 1rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      color: $secondary-color;
+    }
+  }
+}
+
 // Button Styles
 .btn {
   display: block;
