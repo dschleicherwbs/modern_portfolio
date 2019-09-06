@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.93;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -40,7 +40,7 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #f2f2f2;
+    background: #fafafa;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
@@ -130,7 +130,7 @@ h3 {
     background: rgba(255, 255, 255, 0.5); }
 
 a {
-  color: #ffffff;
+  color: #000;
   text-decoration: none; }
 
 header {
@@ -180,11 +180,49 @@ main {
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #000 solid; }
+    .projects img:hover {
+      opacity: 0.7;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-light, .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  transition: all 0.5s ease-out; }
+  .btn:hover, .btn-light:hover, .btn-dark:hover {
+    background: #eece1a;
+    color: #000; }
+
+.btn-light {
+  background: #b3b3b3;
+  color: #333; }
+
+.btn-dark {
+  background: #666666;
+  color: #fff; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #e6e6e6;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -214,8 +252,12 @@ main {
       height: 150px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
